@@ -1,12 +1,11 @@
-import { useState } from "react";
 import Container from "../common/Container";
 import ListItem from "../ui/ListItem";
-import type { NavList } from "../../types/navItemTypes";
 import { Button } from "../ui/Button";
 import Flex from "../ui/Flex";
+import Image from "../ui/Image";
 
 const Header = () => {
-  const [navList, setNavList] = useState<NavList[]>([
+  const navList = [
     {
       id: 1,
       title: "হোম",
@@ -23,13 +22,13 @@ const Header = () => {
       id: 4,
       title: "ক্যারিয়ার গাইডলাইন",
     },
-  ]);
+  ];
   return (
     <header className="bg-primary text-white py-[15px]">
       <nav>
         <Container>
           <Flex className="justify-between items-center">
-            <img src="images/logo.png" alt="logo" />
+            <Image imgurl="images/logo.png" alt="logo"/>
             <ul className="flex gap-[25px]">
               {navList.map((item) => (
                 <ListItem
