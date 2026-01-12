@@ -129,13 +129,42 @@ const Category = () => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
-  function SampleNextArrow(props : onClickType) {
-    const {  onClick } = props;
+  function SampleNextArrow(props: onClickType) {
+    const { onClick } = props;
     return (
       <div
-       className="w-[76px] h-[76px] rounded-[50px] bg-[#415A77] flex justify-center items-center cursor-pointer absolute top-[50%] -translate-y-2/4 right-[-70px]  z-999"
+        className="w-[76px] h-[76px] rounded-[50px] bg-[#415A77] flex justify-center items-center cursor-pointer absolute top-[50%] -translate-y-2/4 right-[-110px]  z-999"
         onClick={onClick}
       >
         <svg
@@ -154,11 +183,11 @@ const Category = () => {
     );
   }
 
-  function SamplePrevArrow(props : onClickType) {
-    const {  onClick } = props;
+  function SamplePrevArrow(props: onClickType) {
+    const { onClick } = props;
     return (
       <div
-       className="w-[76px] h-[76px] rounded-[50px] bg-[#415A77] flex justify-center items-center cursor-pointer absolute top-[50%] -translate-y-2/4 left-[-110px]  z-999"
+        className="w-[76px] h-[76px] rounded-[50px] bg-[#415A77] flex justify-center items-center cursor-pointer absolute top-[50%] -translate-y-2/4 left-[-110px]  z-999"
         onClick={onClick}
       >
         <svg

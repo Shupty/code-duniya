@@ -9,7 +9,7 @@ import { FaUser } from "react-icons/fa";
 
 const Courses_Card = ({ item }: { item: coursesType }) => {
   return (
-    <div className=" max-w-[377px] font-anek ">
+    <div className=" xl:w-[377px] mx-auto font-anek ">
       <Image imgurl={item.imageurl} alt={item.name} />
       <div className="bg-secondary text-white px-4 py-2 rounded-b-[15px] ">
         <Flex className="justify-between">

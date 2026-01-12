@@ -8,7 +8,7 @@ import Video from "./components/video/Video";
 
 const App = () => {
   return (
-    <div>
+    <main>
       <Header />
       <section className="relative">
         <Banner />
@@ -18,7 +18,7 @@ const App = () => {
       <Quality/>
       <Video/>
       <Footer/>
-    </div>
+    </main>
   );
 };
 
